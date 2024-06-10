@@ -1,0 +1,11 @@
+ML Model,Accuracy,f1_score,Recall,Precision
+Logistic Regression,0.934,0.941,0.943,0.927
+K-Nearest Neighbors,0.946,0.95,0.965,0.995
+Support Vector Machine,0.964,0.968,0.98,0.965
+Naive Bayes Classifier,0.605,0.454,0.292,0.997
+Decision Tree,0.961,0.965,0.991,0.993
+Random Forest,0.966,0.97,0.993,0.99
+Gradient Boosting Classifier,0.974,0.977,0.994,0.986
+CatBoost Classifier,0.972,0.975,0.994,0.989
+XGBoost Classifier,0.549,0.544,0.993,0.984
+Multi-layer Perceptron,0.55,0.546,0.993,0.984
