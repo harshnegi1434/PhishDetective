@@ -2,11 +2,13 @@ from flask import Flask, request, jsonify
 import numpy as np
 import pickle
 from urlanalyzer import FeatureExtraction
+from flask_cors import CORS
 import warnings
 
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
+CORS(app, origins=['http://localhost:3000'])
 
 # Load the trained Gradient Boosting Classifier
 with open("models/model.pkl", "rb") as file:
