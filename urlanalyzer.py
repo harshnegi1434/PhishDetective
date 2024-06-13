@@ -10,6 +10,9 @@ from datetime import date, datetime
 import time
 from dateutil.parser import parse as date_parse
 from urllib.parse import urlparse
+import warnings
+
+warnings.filterwarnings('ignore')
 
 class FeatureExtraction:
     features = []
