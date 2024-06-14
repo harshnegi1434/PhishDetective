@@ -3,12 +3,9 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-warnings
 catboost
 xgboost
-pickle
 ipaddress
-re
 beautifulsoup4
 Flask
 Flask_Cors
