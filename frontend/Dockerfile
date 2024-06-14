@@ -4,7 +4,7 @@ FROM node:lts-alpine
 # Set working directory inside the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if present)
+# Copy package.json 
 COPY package.json ./
 
 # Install dependencies using npm
@@ -13,11 +13,11 @@ RUN npm install
 # Copy the rest of the application code
 COPY . .
 
+# Build the Next.js project
+RUN npm run build
+
 # Expose the port Next.js is running on (default is 3000)
 EXPOSE 3000
 
-# Set environment variables
-ENV NODE_ENV=development
-
-# Command to run the application
+# Start the Next.js application
 CMD ["npm", "run", "dev"]
