@@ -16,7 +16,7 @@ COPY . .
 # Build the Next.js project
 RUN npm run build
 
-# Expose the port Next.js is running on (default is 3000)
+# Expose the port Next.js
 EXPOSE 3000
 
 # Start the Next.js application
