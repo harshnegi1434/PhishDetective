@@ -3,8 +3,6 @@ numpy
 matplotlib
 seaborn
 scikit-learn
-catboost
-xgboost
 ipaddress
 beautifulsoup4
 Flask
