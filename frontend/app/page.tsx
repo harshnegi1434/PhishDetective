@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Hero from "@/components/Hero";
-import Check from "@/components/Check";
 
 export default function Home() {
   return (
