@@ -17,7 +17,7 @@ COPY . /app/backend/
 EXPOSE 5000
 
 # Define environment variable for Flask
-ENV FLASK_ENV = development
+ENV FLASK_ENV=development
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
