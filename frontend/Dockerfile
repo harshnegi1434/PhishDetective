@@ -19,5 +19,8 @@ RUN npm run build
 # Expose the port Next.js
 EXPOSE 3000
 
+# Set environment variables for production (adjust if needed)
+ENV NODE_ENV=production
+
 # Start the Next.js application
-CMD ["npm", "run", "dev"]
+CMD ["npm", "start"]
