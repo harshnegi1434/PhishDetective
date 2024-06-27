@@ -2,10 +2,10 @@
 FROM node:lts-alpine
 
 # Set working directory inside the container
-WORKDIR /app
+WORKDIR /app/frontend
 
-# Copy package.json 
-COPY package.json ./
+# Copy package.json and package-lock.json (if exists)
+COPY package*.json ./
 
 # Install dependencies using npm
 RUN npm install
@@ -16,7 +16,7 @@ COPY . .
 # Build the Next.js project
 RUN npm run build
 
-# Expose the port Next.js
+# Expose the port Next.js will run on
 EXPOSE 3000
 
 # Set environment variables for production (adjust if needed)
