@@ -17,7 +17,7 @@ COPY . .
 RUN npm run build
 
 # Expose the port Next.js will run on
-EXPOSE 80
+EXPOSE 3000
 
 # Set environment variables for production (adjust if needed)
 ENV NODE_ENV=production
