@@ -8,7 +8,7 @@ import warnings
 warnings.filterwarnings('ignore')
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:3000'])
+CORS(app, resources={r"/check-url": {"origins": "http://phishdetective.centralindia.azurecontainer.io:3000"}})
 
 # Load the trained Gradient Boosting Classifier
 with open("models/model.pkl", "rb") as file:
