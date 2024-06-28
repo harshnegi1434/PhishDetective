@@ -25,7 +25,7 @@ const Check = () => {
     setResult('');
     setCheckedUrl(url); // Display the URL being checked
 
-    const apiUrl = 'http://localhost:5000/check-url';
+    const apiUrl = 'http://phishdetective.centralindia.azurecontainer.io:5000';
 
     try {
       const response = await fetch(apiUrl, {
