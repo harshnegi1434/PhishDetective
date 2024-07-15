@@ -25,7 +25,7 @@ const Check = () => {
     setResult('');
     setCheckedUrl(url); // Display the URL being checked
 
-    const apiUrl = 'http://phishdetective.centralindia.azurecontainer.io:5000';
+    const apiUrl = 'http://phishdetective-backend.centralindia.azurecontainer.io:5000/check-url';
 
     try {
       const response = await fetch(apiUrl, {
@@ -49,6 +49,8 @@ const Check = () => {
       setLoading(false);
     }
   };
+
+  const resultColor = result.includes('unsafe') ? 'text-red-600' : result.includes('safe') ? 'text-green-600' : '';
 
   return (
     <div className="min-h-screen relative pb-20 pt-36 flex flex-col justify-between overflow-hidden">
@@ -103,8 +105,16 @@ const Check = () => {
             {loading ? `Checking ${checkedUrl}...` : checkedUrl}
           </p>
         )}
-        {result && <p className="mt-2 text-green-600 text-center">{result}</p>}
-        {error && <p className="mt-2 text-red-600 text-center">{error}</p>}
+        {result && (
+          <p className={`mt-2 text-center text-2xl ${resultColor}`}>
+            {result}
+          </p>
+        )}
+        {error && (
+          <p className="mt-2 text-red-600 text-center text-2xl">
+            {error}
+          </p>
+        )}
       </div>
 
       {/* Navigation Button at the bottom */}
