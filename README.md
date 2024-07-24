@@ -2,7 +2,7 @@
 
 PhishDetective is an online phishing detection system designed to identify phishing websites using machine learning. This project consists of a frontend created with Next.js, Tailwind CSS, and Acertainity UI, and a backend built with Python Flask. The dataset used for model training was sourced from Kaggle and pre-processed to create a refined dataset for training various ML algorithms. The best model, Gradient Boosting Classifier, was then deployed. The entire project is migrated to Azure using Docker, Azure Container Registry (ACR), and Azure Container Instances (ACI).
 
-You can access the website here - [Deployed Link](http://phishdetective.centralindia.azurecontainer.io:3000/)
+You can access the website here - [Deployed Link](https://phishdetective.vercel.app)
 
 ## Table of Contents
 
